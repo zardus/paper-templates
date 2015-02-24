@@ -1,0 +1,52 @@
+\documentclass{entcs} \usepackage{entcsmacro}
+
+%\usepackage[all=normal,paragraphs,lists=tight,floats=tight]{savetrees}
+
+\usepackage{times}
+\usepackage{pifont} 
+\usepackage{subfigure}
+\usepackage{url}
+\usepackage{breakurl}
+\def\UrlBreaks{\do\/\do-} %hack to force url breaks on "-" in references
+\usepackage{paralist}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{enumitem}
+
+\newcommand{\comment}[1]{}
+\newcommand{\etc}{\textit{etc.}}
+\newcommand{\ie}{\textit{i.e.}}
+\newcommand{\tick}{\ding{51}}
+\newcommand{\cross}{\ding{55}}
+
+
+\begin{document}
+
+\begin{frontmatter}
+	\title{This is a Paper Template}
+	\author{Anonymous\thanksref{anon}}
+	\address{Anonymous Institution}
+	\thanks[ALL]{anonymous@example.com}
+
+	\begin{abstract}
+		This is very abstract.
+	\end{abstract}
+	\begin{keyword}
+		No, keywords, here.
+	\end{keyword}
+\end{frontmatter}
+
+\pagestyle{empty}
+
+\input{section}
+
+\bibliographystyle{abbrv}
+\bibliography{biblio}
+
+\appendix
+\input{appendix}
+
+
+\end{document}

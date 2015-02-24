@@ -1,0 +1,99 @@
+% Usenix Securitybn
+% February 16
+% 13 pages, without bibliography and appendix
+% Anonymous
+
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{usenix}
+
+%\usepackage[all=normal,paragraphs,lists=tight,floats=tight]{savetrees}
+
+\usepackage{times}
+\usepackage{pifont} 
+\usepackage{subfigure}
+\usepackage{url}
+\usepackage{breakurl}
+\def\UrlBreaks{\do\/\do-} %hack to force url breaks on "-" in references
+\usepackage{paralist}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{slashbox}
+\usepackage{cite}
+\usepackage{enumitem}
+
+\newcommand{\comment}[1]{}
+\newcommand{\etc}{\textit{etc.}}
+\newcommand{\ie}{\textit{i.e.}}
+\newcommand{\tick}{\ding{51}}
+\newcommand{\cross}{\ding{55}}
+
+\usepackage{listings}
+\usepackage{color}
+\usepackage{textcomp}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{listingln}{gray}{0.7}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\lstset{
+	%backgroundcolor=\color{lbcolor},
+	tabsize=4,
+	rulecolor=,
+	%language=matlab,
+    basicstyle={\ttfamily\scriptsize},
+    upquote=true,
+    aboveskip={1.5\baselineskip},
+    columns=fixed,
+    showstringspaces=false,
+    extendedchars=true,
+    breaklines=true,
+    prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    %frame=single,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    identifierstyle=\ttfamily,
+    keywordstyle=\color[rgb]{0,0,1},
+    commentstyle=\color[rgb]{0.133,0.545,0.133},
+    stringstyle=\color[rgb]{0.627,0.126,0.941},
+    numbers=left,
+    numberstyle=\color{listingln},
+    numbersep=5pt,
+    xleftmargin=15pt,
+}
+
+\hypersetup{
+    bookmarks=true,
+    colorlinks,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=black
+}
+
+
+
+\title{This is a Paper Template}
+\author{}
+
+\date{}
+
+
+\begin{document}
+\maketitle
+\pagestyle{empty}
+
+\begin{abstract}
+	This is very abstract.
+\end{abstract}
+
+\stepcounter{section}
+\input{section.txt}
+
+
+\bibliographystyle{abbrv}
+\bibliography{biblio}
+
+\appendix
+\input{appendix}
+
+
+\end{document}

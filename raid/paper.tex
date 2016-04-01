@@ -1,0 +1,69 @@
+%%%%%%%%%%%%%%%%%%%%%%% file typeinst.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is the LaTeX source for the instructions to authors using
+% the LaTeX document class 'llncs.cls' for contributions to
+% the Lecture Notes in Computer Sciences series.
+% http://www.springer.com/lncs       Springer Heidelberg 2006/05/04
+%
+% It may be used as a template for your own input - copy it
+% to a new file with a new name and use it as the basis
+% for your article.
+%
+% NB: the document class 'llncs' has its own and detailed documentation, see
+% ftp://ftp.springer.de/data/pubftp/pub/tex/latex/llncs/latex2e/llncsdoc.pdf
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage[all=normal,paragraphs,lists=tight,floats=tight]{savetrees}
+
+\documentclass[runningheads,a4paper]{llncs}
+
+\usepackage{times}
+\usepackage{pifont} 
+\usepackage{subfigure}
+\usepackage{url}
+\usepackage{breakurl}
+\def\UrlBreaks{\do\/\do-} %hack to force url breaks on "-" in references
+\usepackage{paralist}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{enumitem}
+
+\newcommand{\comment}[1]{}
+\newcommand{\etc}{\textit{etc.}}
+\newcommand{\ie}{\textit{i.e.}}
+\newcommand{\tick}{\ding{51}}
+\newcommand{\cross}{\ding{55}}
+
+\setcounter{tocdepth}{3}
+
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+\noindent\keywordname\enspace\ignorespaces#1}
+\begin{document}
+
+\mainmatter  % start of an individual contribution
+
+\title{This is a Paper Template}
+\institute{}
+
+\author{}
+
+\maketitle
+\pagestyle{empty}
+
+\begin{abstract}
+	\input{abstract}
+\end{abstract}
+
+\input{section}
+
+
+\bibliographystyle{abbrv}
+\bibliography{biblio}
+
+\input{appendix}
+
+
+\end{document}

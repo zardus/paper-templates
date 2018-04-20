@@ -1,0 +1,138 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[letterpaper, top=1in, left=1in, right=1in, bottom=1in]{geometry}
+
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage[english]{babel}
+\usepackage{vmargin}
+\usepackage{times}
+\usepackage{caption}
+\usepackage{amssymb}
+% amsmath does not play nicely with pgfgantt
+%\usepackage[fleqn]{amsmath}
+\usepackage{cite}
+\usepackage{titling}
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{wrapfig}
+\usepackage{todonotes}
+\usepackage{etoolbox}
+\usepackage{enumitem}
+\usepackage{arydshln}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{array} % for defining a new column type
+\usepackage{color}
+\usepackage{tikz}
+\usepackage[T1]{fontenc}
+\usepackage{pdfpages}
+\usepackage{xcolor}
+\usepackage{pgfgantt}
+\usepackage[compact]{titlesec}
+
+%% Break in case of space
+%% \usepackage[compact,noindentafter]{titlesec}
+%% \titlespacing{\section}{0pt}{*0}{*0}
+%% \titlespacing{\subsection}{0pt}{*0}{*0}
+%% \titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+
+
+\newenvironment{code}{\captionsetup{type=listing}}{}
+
+\renewcommand\rmdefault{ptm}
+\newcommand{\puppeteer}{Puppeteer}
+
+\clubpenalty=10000
+\widowpenalty=10000
+
+% Change paragraph spacing
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}%
+  {\z@}{10pt \@plus 1ex \@minus .2ex}{-1em}% default is 3.25ex, changed to 2.75ex
+  {\normalfont\normalsize\bfseries}%
+}
+\makeatother
+
+
+%\setlength{\textheight}{220mm}
+%\setlength{\textwidth}{160mm}
+%% \setlength{\textheight}{226mm}
+%% \setlength{\textwidth}{161mm}
+%% \evensidemargin=1.1in
+%% \oddsidemargin=1.1in
+%% \topmargin=11mm
+
+
+%% \setlength{\textheight}{226mm}
+%% \setlength{\textwidth}{161mm}
+%% \evensidemargin=1.1in
+%% \oddsidemargin=1.1in
+%% \topmargin=11mm
+
+\newcommand{\volume}{1}
+\newcommand{\covertitle}{Technical and Management Proposal}
+
+\title{A DARPA Proposal}
+\date{}
+
+
+\begin{document}
+\advance\baselineskip-.3pt plus.3pt minus0pt
+
+\pagenumbering{gobble}
+\input{cover}
+\newpage
+
+\pagenumbering{roman}
+
+\tableofcontents
+\pagebreak
+
+% Commands to futz with the title
+
+
+\pagenumbering{arabic}
+%\setcounter{section}{1}
+\section{Executive Summary}
+\input{executive-summary}
+
+\section{Innovative Claims and Deliverables}
+\input{innovative-claims}
+
+\section{Technical Plan}
+\input{technical-plan}
+
+\section{Management Plan}
+\label{management-plan}
+\input{management-plan}
+
+\section{Personnel, Qualification, and Commitments}
+\label{sec:qualifications}
+\input{qualifications}
+
+\section{Capabilities}
+\input{capabilities}
+
+\section{Statement of Work (SOW)}
+\input{statement-of-work}
+
+\pagebreak
+\section{Schedule and Milestones}
+\input{schedule-and-milestones}
+
+\pagebreak
+
+\appendix
+
+\section{Appendix A}
+\input{appendix-a}
+
+\patchcmd{\thebibliography}{\section*}{\section}{}{}
+\bibliographystyle{plain}
+\bibliography{biblio}
+
+
+\end{document}

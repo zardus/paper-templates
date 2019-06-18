@@ -1,41 +1,24 @@
 % Usenix Securitybn
-% February 16
+% July 18
 % 13 pages, without bibliography and appendix
 % Anonymous
 
 \documentclass[letterpaper,twocolumn,10pt]{article}
-\usepackage{usenix}
+\usepackage{usenix2019_v3}
 
-%\usepackage[all=normal,paragraphs,lists=tight,floats=tight]{savetrees}
-
-\usepackage{times}
-\usepackage{pifont} 
-\usepackage{subfigure}
-\usepackage{url}
-\usepackage{breakurl}
-\def\UrlBreaks{\do\/\do-} %hack to force url breaks on "-" in references
-\usepackage{paralist}
-\usepackage{booktabs}
-\usepackage{listings}
-\usepackage{graphicx}
-\usepackage{cite}
-\usepackage{enumitem}
-
-\newcommand{\comment}[1]{}
-\newcommand{\etc}{\textit{etc.}}
-\newcommand{\ie}{\textit{i.e.}}
-\newcommand{\tick}{\ding{51}}
-\newcommand{\cross}{\ding{55}}
-
-
-\title{This is a Paper Template}
-\author{}
-
-\date{}
-
-
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{filecontents}
 \begin{document}
-\maketitle
+	%\date{}
+	
+	% make title bold and 14 pt font (Latex default is non-bold, 16 pt)
+	\title{\Large \bf Formatting Submissions for a USENIX Conference:}
+	
+	%\author{} % end author
+	
+	\maketitle
+
 \pagestyle{empty}
 
 \begin{abstract}
@@ -45,7 +28,7 @@
 \input{section}
 
 
-\bibliographystyle{abbrv}
+\bibliographystyle{plain}
 \bibliography{biblio}
 
 \appendix
